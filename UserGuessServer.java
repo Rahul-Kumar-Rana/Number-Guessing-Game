@@ -13,7 +13,15 @@ public class UserGuessServer {
     public static void main(String[] args) throws IOException {
         generateNewNumber();
 
-        HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
+        // HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
+
+        int port = Integer.parseInt(
+            System.getenv().getOrDefault("PORT", "8081")
+        );
+
+        HttpServer server = HttpServer.create(
+            new InetSocketAddress("0.0.0.0", port), 0
+        );
 
         server.createContext("/game1/guess", new GuessHandler());
         server.createContext("/game1/restart", new RestartHandler());
