@@ -1,5 +1,5 @@
 
-const BASE_URL = "http://localhost:8081/game1";
+const BASE_URL = "https://number-guessing-backend-5242.onrender.com/game1";
 
 let currentSecretNumber = null;
 let isGameOver = false;
