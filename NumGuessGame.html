@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Guessing Game</title>
+    <link rel="stylesheet" href="./NumGuessGame.css">
+</head>
+<body>
+    <div class="game-card">
+        <h2>Number Guessing Game</h2>
+        <p>Find the secret number hidden inside one of the bubbles!</p>
+
+        <div id="bubbleContainer" class="bubble-grid"></div>
+
+        <div class="button-group">
+            <button class="btn-restart" onclick="restartGame()">Reset Game 🔄</button>
+        </div>
+
+        <p id="output" class="status-text">Click any bubble to start the game!</p>
+    </div>
+
+    <script src="./NumGuessGame.js"></script>
+</body>
+</html>
